@@ -1,0 +1,275 @@
+/* =========================================================
+   Red Snapper Fish & Chicken – Refined White & Black Theme
+   FULL UPDATED VERSION – Darker Navbar Fixed
+   ========================================================= */
+
+:root{
+  --rs-bg: #ffffff;
+  --rs-surface: #ffffff;
+  --rs-surface-2: #ffffff;
+  --rs-text: #000000;
+  --rs-muted: #666666;
+  --rs-accent: #000000;
+  --rs-accent-2: #000000;
+  --rs-border: #e6e6e6;
+  --rs-shadow: 0 8px 24px rgba(0,0,0,.05);
+}
+
+html, body{ height: 100%; }
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--rs-text);
+  background: #ffffff;
+}
+
+a{ color: inherit; }
+a:hover{ color: #000; }
+
+.container-lg, .container-xl { max-width: 1100px; }
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  background: #e5e5e5;  /* darker + visible */
+  border-bottom: 1px solid #cccccc;
+}
+
+.navbar-brand{
+  letter-spacing: .4px;
+  font-weight: 800;
+  color: #000000 !important;
+}
+
+.brand-lockup{
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+}
+
+.brand-lockup img{ width: 34px; height: 34px; object-fit: contain; }
+
+.brand-lockup .brand-title{
+  font-size: .98rem;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.brand-lockup .brand-sub{
+  font-size: .78rem;
+  color: #444444;
+  opacity: 1;
+}
+
+.nav-link{
+  color: #000000 !important;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .5rem .85rem !important;
+}
+
+.nav-link:hover{
+  background: #dcdcdc;
+  color: #000000 !important;
+}
+
+.nav-link.active{
+  background: #000000;
+  color: #ffffff !important;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-accent{
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #000000;
+  --bs-btn-color: #000000;
+
+  --bs-btn-hover-bg: #000000;
+  --bs-btn-hover-border-color: #000000;
+  --bs-btn-hover-color: #ffffff;
+
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: #000000;
+  --bs-btn-active-color: #ffffff;
+
+  box-shadow: none;
+}
+
+.btn-ghost{
+  --bs-btn-color: #000000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-bg: #000000;
+  --bs-btn-hover-border-color: #000000;
+  --bs-btn-hover-color: #ffffff;
+}
+
+.footer .btn{
+  --bs-btn-bg: #f3f3f3;
+  --bs-btn-border-color: #dddddd;
+  --bs-btn-color: #000000;
+
+  --bs-btn-hover-bg: #e6e6e6;
+  --bs-btn-hover-border-color: #dddddd;
+  --bs-btn-hover-color: #000000;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+  background: #ffffff;
+  border: 1px solid var(--rs-border);
+  border-radius: 18px;
+  box-shadow: var(--rs-shadow);
+}
+
+.card-hover{
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card-hover:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+  padding: 3.25rem 0;
+}
+
+@media (min-width: 992px){
+  .section{ padding: 4.5rem 0; }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding-top: 1.25rem;
+}
+
+.hero-surface{
+  background: #ffffff;
+  border: 1px solid var(--rs-border);
+  border-radius: 26px;
+  overflow:hidden;
+  box-shadow: var(--rs-shadow);
+}
+
+.hero-left{
+  padding: 2.1rem 1.5rem;
+}
+
+@media (min-width: 992px){
+  .hero-left{ padding: 3.4rem 3rem; }
+}
+
+.hero h1{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  line-height: 1.05;
+}
+
+@media (min-width: 992px){
+  .hero h1{ font-size: 3rem; }
+}
+
+.hero p{
+  color: var(--rs-muted);
+  font-size: 1.05rem;
+  max-width: 58ch;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider{
+  height: 1px;
+  background: var(--rs-border);
+  margin: 1.75rem 0;
+}
+
+/* ================= MENU ================= */
+
+.menu-category-title{
+  font-weight: 900;
+}
+
+.menu-item{
+  display:flex;
+  gap:.75rem;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .65rem .75rem;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: #ffffff;
+  transition: background .16s ease, border-color .16s ease;
+}
+
+.menu-item:hover{
+  background: #f5f5f5;
+  border-color: var(--rs-border);
+}
+
+.menu-item .name{ font-weight: 700; }
+
+/* ensure long names wrap and don't push the container wider */
+.menu-item{
+  /* allow children to wrap onto multiple lines when necessary */
+  flex-wrap: wrap;
+}
+
+.menu-item > div:first-child{
+  /* keep the name container flexible but able to shrink for wrapping */
+  flex: 1 1 auto;
+  min-width: 0; /* required for flex items to actually wrap */
+}
+
+.menu-item .name{
+  /* break words and slightly reduce size to help fit in narrow cards */
+  word-break: break-word;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.menu-item .price{
+  font-weight: 800;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.menu-item .sub{
+  display:block;
+  font-size:.9rem;
+  color: var(--rs-muted);
+  margin-top:.15rem;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  border-top: 1px solid var(--rs-border);
+  background: #ffffff;
+}
+
+.footer a{
+  color: #000000;
+}
+
+.footer a:hover{
+  color: #333333;
+}
+
+/* ================= FOCUS ================= */
+
+:focus-visible{
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.smallprint{
+  font-size: .92rem;
+  color: var(--rs-muted);
+}
